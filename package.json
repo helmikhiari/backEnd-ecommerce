@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "build": "webpack --mode production"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +23,10 @@
     "multer": "^1.4.5-lts.1",
     "nodemailer": "^6.9.15",
     "nodeman": "^1.1.2",
-    "uuid": "^10.0.0"
+    "uuid": "^10.0.0",
+    "webpack": "^5.96.1"
+  },
+  "devDependencies": {
+    "webpack-cli": "^5.1.4"
   }
 }

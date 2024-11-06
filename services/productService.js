@@ -13,7 +13,7 @@ exports.getProducts = async () => {
 
 exports.searchProducts = async (name) => {
     try {
-        
+
         const products = await productModel.find();
         let filtered = products.filter(p => p.name.toLowerCase().includes(name.toLowerCase()))
         return filtered;
@@ -25,7 +25,7 @@ exports.searchProducts = async (name) => {
 
 exports.addProduct = async (name, price, img, onSale) => {
     try {
-        const newProduct = new productModel({ name, price, image: `http://localhost:5000/uploads/${img.filename}`, onSale });
+        const newProduct = new productModel({ name, price, image: `https://backend-ecommerce-1-eoda.onrender.com/uploads/${img.filename}`, onSale });
         await newProduct.save();
         return true;
     }
